@@ -4,7 +4,7 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
-    --color-body-darker:#5c5577;
+    --color-body-darker: #5c5577;
     --color-border: #ccc;
     --border-radius: 30px;
 }
@@ -124,8 +124,9 @@ a {
     .badge {
         font-size: 1.5rem;
     }
+
     .badge--small {
-        font-size:1.2rem;
+        font-size: 1.2rem;
     }
 
 }
@@ -134,7 +135,7 @@ a {
 
 .list {
     list-style: none;
-    padding-left:0;
+    padding-left: 0;
     color: var(--color-headings);
 }
 
@@ -153,7 +154,7 @@ a {
     margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .list--tick .list__item {
         padding-left: 0;
     }
@@ -168,7 +169,7 @@ a {
 
 .icon--snall {
     width: 30px;
-    height:30px;
+    height: 30px;
 }
 
 .icon--primary {
@@ -219,7 +220,7 @@ a {
 
 .btn--secondary {
     background: var(--color-secondary);
-    color:#fff
+    color: #fff
 }
 
 .btn--secondary:hover {
@@ -228,7 +229,7 @@ a {
 
 .btn--accent {
     background: var(--color-accent);
-    color:#fff;
+    color: #fff;
 }
 
 .btn--accent:hover {
@@ -284,7 +285,7 @@ a {
 }
 
 
-.input-group .input {    /*To remove the border of the input*/
+.input-group .input { /*To remove the border of the input*/
     border: 0;
     flex-grow: 1;
 }
@@ -311,12 +312,12 @@ a {
     padding: 2rem 3rem;
 }
 
-.card--primary .card__header{
+.card--primary .card__header {
     background: var(--color-primary);
     color: #fff;
 }
 
-.card--secondary .card__header{
+.card--secondary .card__header {
     background: var(--color-secondary);
     color: #fff;
 }
@@ -361,11 +362,11 @@ a {
 }
 
 .plan--popular .card__header::before {
-    content:url(../images/popular.svg);
+    content: url(../images/popular.svg);
     width: 40px;
     display: inline-block;
     position: absolute;
-    top:-6px;
+    top: -6px;
     right: 5%;
 }
 
@@ -394,7 +395,7 @@ a {
 }
 
 .media__body {
-    margin:0 2rem;
+    margin: 0 2rem;
 }
 
 .media__image {
@@ -418,7 +419,7 @@ a {
     content: close-quote;
 }
 
-.quote__author{
+.quote__author {
     font-size: 3rem;
     font-weight: 500;
     font-style: normal;
@@ -437,10 +438,11 @@ a {
     bottom: 10px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .quote {
         font-size: 2rem;
     }
+
     .quote__author {
         font-size: 2.4rem;
     }
@@ -471,7 +473,7 @@ a {
 /*Testimonial*/
 
 .testimonial {
-    padding:3rem;
+    padding: 3rem;
 }
 
 .testimonial__image {
@@ -489,9 +491,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-    .testimonial .quote, .testimonial .quote__author{
+    .testimonial .quote, .testimonial .quote__author {
         font-size: 2.4rem;
     }
+
     .testimonial .quote {
         margin-left: 6rem;
     }
@@ -511,7 +514,7 @@ a {
 
 .callout__heading {
     color: #fff;
-    margin-top:0;
+    margin-top: 0;
     font-size: 3rem;
 }
 
@@ -532,6 +535,7 @@ a {
     .callout__content {
         text-align: left;
     }
+
     .callout .btn {
         justify-self: start;
         margin: 0 2rem;
@@ -562,11 +566,51 @@ a {
     transition: all .3s;
 }
 
-.collapsible--expanded .collapsible__chevron{
+.collapsible--expanded .collapsible__chevron {
     transform: rotate(0);
 }
 
 .collapsible--expanded .collapsible__content {
     max-height: 100vh;
     opacity: 1;
+}
+
+/*Blocks*/
+
+.block {
+    --padding-vertical: 6rem;
+    padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+    text-align: center;
+
+}
+
+.block__heading {
+    margin-top: 0;
+}
+
+.block--dark {
+    background: #000;
+    color: #7b858b;
+}
+
+.block--dark .block__heading {
+    color: #fff;
+}
+
+.block__skewed-right {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block__skewed-left {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
 }
